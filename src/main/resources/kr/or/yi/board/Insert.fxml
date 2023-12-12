@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #5905;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.yi.board.Controller.InsertController">
+   <children>
+      <Label layoutX="357.0" layoutY="14.0" text="게시글 작성" textFill="#1d9e86">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="66.0" text="제 목 : ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="153.0" text="내 용 : ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="113.0" text="작성자 : ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfTitle" layoutX="180.0" layoutY="66.0" prefHeight="33.0" prefWidth="609.0" promptText="제목을 입력하세요.">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tfWriter" layoutX="180.0" layoutY="112.0" prefHeight="32.0" prefWidth="609.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="taContent" layoutX="90.0" layoutY="195.0" prefHeight="271.0" prefWidth="450.0" />
+      <Button layoutX="90.0" layoutY="548.0" mnemonicParsing="false" onAction="#moveToList" styleClass="round-button" stylesheets="@application.css" text="목록보기">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="698.0" layoutY="548.0" mnemonicParsing="false" onAction="#insert" styleClass="round-button" stylesheets="@application.css" text="글 등록">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="90.0" layoutY="481.0" text="파 일 : ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfFilePath" layoutX="170.0" layoutY="480.0" prefHeight="33.0" prefWidth="267.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <Button layoutX="445.0" layoutY="477.0" mnemonicParsing="false" onAction="#fileUpload" prefHeight="38.0" prefWidth="91.0" styleClass="round-button" stylesheets="@application.css" text="파일선택">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageView" fitHeight="271.0" fitWidth="211.0" layoutX="578.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+<!--      <Button layoutX="870.0" layoutY="3.0" mnemonicParsing="false" onAction="#close" prefHeight="33.0" prefWidth="33.0" styleClass="close" />-->
+      <FontAwesomeIcon glyphName="CLOSE" layoutX="881.0" layoutY="24.0" />
+   </children>
+</AnchorPane>

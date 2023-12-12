@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#handleMouseClicked" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #5905;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.yi.board.MainController">
+   <children>
+      <Label layoutX="362.0" layoutY="62.0" text="게시판 목록">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <TableView fx:id="boardTableView" layoutX="6.0" layoutY="158.0" prefHeight="268.0" prefWidth="888.0" style="-fx-background-color: #CCCC99;">
+        <columns>
+          <TableColumn fx:id="colCbDelete" prefWidth="45.0">
+               <graphic>
+                  <CheckBox fx:id="cbAll" mnemonicParsing="false" text="CheckBox" />
+               </graphic></TableColumn>
+          <TableColumn fx:id="colBoardNo" prefWidth="105.0" text="글 번 호" />
+            <TableColumn fx:id="colTitle" prefWidth="287.0" text="제 목" />
+            <TableColumn fx:id="colWriter" prefWidth="108.0" text="작 성 자" />
+            <TableColumn fx:id="colRegDate" minWidth="0.0" prefWidth="112.0" text="등 록 일 자" />
+            <TableColumn fx:id="colUpdate" prefWidth="105.0" text="수 정 일 자" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnClose" layoutX="38.0" layoutY="488.0" mnemonicParsing="false" onAction="#close" styleClass="round-button" stylesheets="@application.css" text="종료하기">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnInsert" layoutX="571.0" layoutY="488.0" mnemonicParsing="false" onAction="#moveToInsert" styleClass="round-button" stylesheets="@application.css" text="글 작성">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="776.0" layoutY="488.0" mnemonicParsing="false" onAction="#deleteSelected" styleClass="round-button" stylesheets="@application.css" text="글 삭제">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="90.0" fitWidth="272.0" layoutX="52.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/두목님.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="272.0" layoutX="776.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/두목님.png" />
+         </image>
+      </ImageView>
+      <Pagination fx:id="pagination" layoutX="350.0" layoutY="467.0" prefHeight="67.0" prefWidth="200.0" />
+      <Button layoutX="687.0" layoutY="488.0" mnemonicParsing="false" onAction="#moveToUpdate" styleClass="round-button" stylesheets="@application.css" text="수정">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

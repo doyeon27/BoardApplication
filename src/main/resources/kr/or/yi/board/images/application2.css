@@ -1,0 +1,23 @@
+/* application.css */
+
+/* 루트 노드 또는 특정 구성 요소에 스타일 추가 */
+.root {
+    -fx-background-color: #f0f0f0; /* 배경색 설정 */
+}
+
+#mainPane {
+    -fx-background-color: #ffffff; /* 메인 패널에 다른 배경색 설정 */
+    -fx-padding: 20px; /* 여백 추가 */
+    -fx-border-color: #ccc; /* 테두리 색상 추가 */
+    -fx-border-width: 1px; /* 테두리 너비 지정 */
+    -fx-border-radius: 5px; /* 테두리 모서리를 둥글게 만듦 */
+}
+
+/* 버튼 커스터마이징 */
+.button {
+    -fx-background-color: #336699; /* 버튼 배경색 설정 */
+    -fx-text-fill: white; /* 버튼 텍스트 색상 설정 */
+    -fx-padding: 10px 20px; /* 여백 추가 */
+    -fx-font-size: 14px; /* 폰트 크기 설정 */
+    -fx-background-radius: 5px; /* 버튼 모서리 둥글게 만듦 */
+}

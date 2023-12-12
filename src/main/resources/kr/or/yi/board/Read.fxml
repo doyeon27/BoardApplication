@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #5905;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.yi.board.Controller.ReadController">
+   <children>
+      <Label layoutX="317.0" layoutY="54.0" text="게시글 상세보기" textFill="#1d9e86">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="132.0" text="제 목 : ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="231.0" text="내용 : ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="182.0" text="작성자 : ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfTitle" editable="false" layoutX="186.0" layoutY="131.0" prefHeight="33.0" prefWidth="609.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tfWrite" editable="false" layoutX="186.0" layoutY="181.0" prefHeight="32.0" prefWidth="609.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="taContent" editable="false" layoutX="94.0" layoutY="268.0" prefHeight="194.0" prefWidth="354.0" />
+      <Button layoutX="94.0" layoutY="493.0" mnemonicParsing="false" onAction="#moveToList" styleClass="round-button" stylesheets="@application.css" text="목록보기">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="657.0" layoutY="493.0" mnemonicParsing="false" onAction="#moveToUpdate" styleClass="round-button" stylesheets="@application.css" text="수정">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="730.0" layoutY="493.0" mnemonicParsing="false" onAction="#deleteToList" styleClass="round-button" stylesheets="@application.css" text="삭제">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imageView" fitHeight="194.0" fitWidth="313.0" layoutX="482.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="458.0" layoutY="493.0" mnemonicParsing="false" onAction="#moveToNext" styleClass="round-button" stylesheets="@application.css" text="다음글">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="365.0" layoutY="493.0" mnemonicParsing="false" onAction="#moveToPrev" styleClass="round-button" stylesheets="@application.css" text="이전글">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+<!--      <Button layoutX="867.0" mnemonicParsing="false" onAction="#close" prefHeight="33.0" prefWidth="33.0" styleClass="close" />-->
+      <FontAwesomeIcon glyphName="CLOSE" layoutX="878.0" layoutY="21.0" />
+   </children>
+</AnchorPane>
